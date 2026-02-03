@@ -135,12 +135,12 @@
         const modalOverlay = document.getElementById("modalOverlay");
         const modalText = document.getElementById("modalText");
 
-        const noTexts = ["Are you sure?", "Really sure?", "If you say no, I will be really sad...", "Bebe please", "say yes or die!!"];
+        const noTexts = ["Damn, you really clicked no?", "Are you sure?", "That's messed up", "Bebe pls", "Por favor"];
 
         noButton.addEventListener("click", () => {
             noCount++;
             if (noCount >= 5) {
-                openModal("Pookie Stop! I love you!");
+                openModal("Dont do this! I love you!");
                 return;
             }
 
@@ -178,5 +178,6 @@
     </script>
 </body>
 </html>
+
 
 
