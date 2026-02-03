@@ -150,7 +150,7 @@
             yesButton.style.padding = (parseInt(yesButton.style.padding || 10) + 5) + "px";
 
             // Change No button text
-            noButton.textContent = noTexts[noCount % noTexts.length];
+            noButton.textContent = noTexts[(noCount - 1) % noTexts.length];
 
             // Move No button to a random position within the viewport
             let maxX = window.innerWidth - noButton.offsetWidth;
@@ -178,6 +178,7 @@
     </script>
 </body>
 </html>
+
 
 
 
