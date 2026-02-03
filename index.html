@@ -127,6 +127,15 @@
         <img src="cute.gif" alt="Cute GIF">
     </div>
 
+    <div id="resultMessage" style="
+    display:none;
+    margin-top:15px;
+    font-size:26px;
+    font-weight:bold;
+    color:red;
+    ">
+    </div>
+
     <script>
         let noCount = 0;
         const yesButton = document.getElementById("yesButton");
@@ -140,7 +149,9 @@
         noButton.addEventListener("click", () => {
             noCount++;
             if (noCount >= 5) {
-                openModal("Dont do this! I love you!");
+                const msg = document.getElementById("resultMessage");
+                msg.textContent = "Don’t do this! I love you! ❤️";
+                msg.style.display = "block";
                 return;
             }
 
@@ -161,9 +172,15 @@
             noButton.style.top = Math.max(0, Math.random() * maxY) + "px";
         });
 
-        yesButton.addEventListener("click", () => {
-            openModal("I love you ❤️");
+        yyesButton.addEventListener("click", () => {
+        const msg = document.getElementById("resultMessage");
+        msg.textContent = "I love you ❤️";
+        msg.style.display = "block";
+
+        // Optional: hide the buttons after YES
+        document.querySelector(".button-container").style.display = "none";
         });
+
 
         function openModal(message) {
             modalText.textContent = message;
@@ -178,6 +195,7 @@
     </script>
 </body>
 </html>
+
 
 
 
